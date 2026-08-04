@@ -1,0 +1,155 @@
+<svg width="1000" height="340" viewBox="0 0 1000 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="card">
+      <rect x="1" y="1" width="998" height="338" rx="18"/>
+    </clipPath>
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff">
+        <animate attributeName="stop-color" values="#58a6ff;#a371f7;#2dd4bf;#58a6ff" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#a371f7">
+        <animate attributeName="stop-color" values="#a371f7;#2dd4bf;#58a6ff;#a371f7" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#2dd4bf">
+        <animate attributeName="stop-color" values="#2dd4bf;#58a6ff;#a371f7;#2dd4bf" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f6feb" stop-opacity="0.7">
+        <animate attributeName="stop-color" values="#1f6feb;#a371f7;#2dd4bf;#1f6feb" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#a371f7" stop-opacity="0.7">
+        <animate attributeName="stop-color" values="#a371f7;#2dd4bf;#1f6feb;#a371f7" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M 44 0 H 0 V 44" stroke="#8b949e" stroke-opacity="0.07" stroke-width="1" fill="none"/>
+    </pattern>
+    <filter id="orbBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+    <filter id="pulseGlow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="nameBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <!-- card -->
+  <rect x="1" y="1" width="998" height="338" rx="18" fill="#0d1117"/>
+
+  <g clip-path="url(#card)">
+    <rect width="1000" height="340" fill="url(#grid)"/>
+
+    <!-- ambient aurora -->
+    <g filter="url(#orbBlur)">
+      <circle cx="200" cy="70" r="130" fill="#1f6feb" opacity="0.14">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 60 30; 0 0" dur="14s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="820" cy="280" r="140" fill="#a371f7" opacity="0.12">
+        <animateTransform attributeName="transform" type="translate" values="0 0; -70 -30; 0 0" dur="18s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- circuit traces -->
+    <g stroke="#30363d" stroke-width="1.5" fill="none">
+      <path d="M 0 104 H 128 L 160 136 H 268"/>
+      <path d="M 1000 262 H 892 L 856 226 H 748"/>
+    </g>
+    <g fill="#0d1117" stroke="#484f58" stroke-width="1.5">
+      <circle cx="268" cy="136" r="4"/>
+      <circle cx="748" cy="226" r="4"/>
+    </g>
+    <circle r="3" fill="#58a6ff" filter="url(#pulseGlow)">
+      <animateMotion path="M 0 104 H 128 L 160 136 H 268" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.85;1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3" fill="#2dd4bf" filter="url(#pulseGlow)">
+      <animateMotion path="M 1000 262 H 892 L 856 226 H 748" dur="4.8s" begin="-2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.85;1" dur="4.8s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- border -->
+  <rect x="1" y="1" width="998" height="338" rx="18" stroke="url(#borderGrad)" stroke-width="1.5" fill="none"/>
+
+  <!-- terminal bar -->
+  <circle cx="30" cy="32" r="6" fill="#ff5f56"/>
+  <circle cx="52" cy="32" r="6" fill="#ffbd2e"/>
+  <circle cx="74" cy="32" r="6" fill="#27c93f"/>
+  <text x="96" y="37" font-family="'SF Mono','Cascadia Code',Consolas,'Courier New',monospace" font-size="14" fill="#7d8590">hamza@github:~$ ./boot.sh</text>
+  <text x="972" y="37" text-anchor="end" font-family="'SF Mono','Cascadia Code',Consolas,'Courier New',monospace" font-size="12" fill="#484f58">HAMZA-OS v7.0.1</text>
+
+  <!-- ══ BOOT SEQUENCE (plays once, then dissolves) ══ -->
+  <g font-family="'SF Mono','Cascadia Code',Consolas,'Courier New',monospace" font-size="15">
+    <animate attributeName="opacity" begin="4.7s" dur="0.6s" values="1;0" fill="freeze"/>
+    <text x="48" y="86" fill="#e6edf3" opacity="0">HAMZA-OS v7.0.1 — booting…
+      <animate attributeName="opacity" begin="0.25s" dur="0.12s" values="0;1" fill="freeze"/>
+    </text>
+    <text x="48" y="116" fill="#7d8590" opacity="0">&gt; mounting /dev/fintech ................ <tspan fill="#3fb950">[OK]</tspan>
+      <animate attributeName="opacity" begin="0.75s" dur="0.12s" values="0;1" fill="freeze"/>
+    </text>
+    <text x="48" y="146" fill="#7d8590" opacity="0">&gt; loading solidity_runtime ............. <tspan fill="#3fb950">[OK]</tspan>
+      <animate attributeName="opacity" begin="1.25s" dur="0.12s" values="0;1" fill="freeze"/>
+    </text>
+    <text x="48" y="176" fill="#7d8590" opacity="0">&gt; opening stripe_webhooks .............. <tspan fill="#3fb950">[OK]</tspan>
+      <animate attributeName="opacity" begin="1.75s" dur="0.12s" values="0;1" fill="freeze"/>
+    </text>
+    <text x="48" y="206" fill="#7d8590" opacity="0">&gt; brewing coffee ....................... <tspan fill="#f85149">[CRITICAL]</tspan>
+      <animate attributeName="opacity" begin="2.25s" dur="0.12s" values="0;1" fill="freeze"/>
+    </text>
+    <text x="48" y="236" fill="#7d8590" opacity="0">&gt; launching side_projects .............. <tspan fill="#a371f7">[∞ running]</tspan>
+      <animate attributeName="opacity" begin="2.75s" dur="0.12s" values="0;1" fill="freeze"/>
+    </text>
+    <text x="48" y="266" fill="#58a6ff" opacity="0">system ready — welcome.
+      <animate attributeName="opacity" begin="3.4s" dur="0.12s" values="0;1" fill="freeze"/>
+    </text>
+    <rect x="48" y="278" width="9" height="17" fill="#58a6ff">
+      <animate attributeName="opacity" values="1;0" keyTimes="0;0.5" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ══ IDENTITY (revealed after boot) ══ -->
+  <g opacity="0">
+    <animate attributeName="opacity" begin="5.2s" dur="0.9s" values="0;1" fill="freeze"/>
+
+    <text x="500" y="185" text-anchor="middle" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="66" font-weight="800" letter-spacing="6" fill="url(#nameGrad)" filter="url(#nameBlur)" opacity="0.5">HAMZA MASOOD</text>
+    <text x="500" y="185" text-anchor="middle" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="66" font-weight="800" letter-spacing="6" fill="url(#nameGrad)">HAMZA MASOOD</text>
+
+    <rect x="245" y="205" width="510" height="3" rx="1.5" fill="url(#nameGrad)" opacity="0.7"/>
+    <rect x="245" y="205" width="90" height="3" rx="1.5" fill="url(#shineGrad)">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 420 0; 0 0" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <g font-family="'SF Mono','Cascadia Code',Consolas,'Courier New',monospace" font-size="21" letter-spacing="5" text-anchor="middle">
+      <text x="500" y="258" fill="#e6edf3" opacity="1">
+        <tspan fill="#58a6ff">⟨ </tspan>FULL STACK ENGINEER<tspan fill="#58a6ff"> ⟩</tspan>
+        <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.21;0.25;0.96;1" dur="16s" begin="5.2s" repeatCount="indefinite"/>
+      </text>
+      <text x="500" y="258" fill="#e6edf3" opacity="0">
+        <tspan fill="#2dd4bf">⟨ </tspan>FINTECH INNOVATOR<tspan fill="#2dd4bf"> ⟩</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.21;0.25;0.46;0.5;1" dur="16s" begin="5.2s" repeatCount="indefinite"/>
+      </text>
+      <text x="500" y="258" fill="#e6edf3" opacity="0">
+        <tspan fill="#a371f7">⟨ </tspan>BLOCKCHAIN EXPLORER<tspan fill="#a371f7"> ⟩</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.46;0.5;0.71;0.75;1" dur="16s" begin="5.2s" repeatCount="indefinite"/>
+      </text>
+      <text x="500" y="258" fill="#e6edf3" opacity="0">
+        <tspan fill="#f778ba">⟨ </tspan>PROBLEM SOLVER<tspan fill="#f778ba"> ⟩</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.71;0.75;0.96;1" dur="16s" begin="5.2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <text x="500" y="304" text-anchor="middle" font-family="'SF Mono','Cascadia Code',Consolas,'Courier New',monospace" font-size="13" fill="#7d8590">// engineering the future of fintech — one commit at a time</text>
+  </g>
+</svg>

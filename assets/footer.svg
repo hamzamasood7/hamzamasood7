@@ -1,0 +1,31 @@
+<svg width="1000" height="180" viewBox="0 0 1000 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wave1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f6feb" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a371f7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a371f7" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="wave3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- back wave: drifts left -->
+  <path d="M0 70 Q100 40 200 70 T400 70 T600 70 T800 70 T1000 70 T1200 70 T1400 70 T1600 70 T1800 70 T2000 70 V180 H0 Z" fill="url(#wave1)">
+    <animateTransform attributeName="transform" type="translate" values="0 0; -800 0" dur="14s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- middle wave: drifts right -->
+  <path d="M-2000 84 Q-1900 112 -1800 84 T-1600 84 T-1400 84 T-1200 84 T-1000 84 T-800 84 T-600 84 T-400 84 T-200 84 T0 84 T200 84 T400 84 T600 84 T800 84 T1000 84 V180 H-2000 Z" fill="url(#wave2)">
+    <animateTransform attributeName="transform" type="translate" values="0 0; 800 0" dur="18s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- front wave: drifts left, faster -->
+  <path d="M0 106 Q125 84 250 106 T500 106 T750 106 T1000 106 T1250 106 T1500 106 T1750 106 T2000 106 V180 H0 Z" fill="url(#wave3)">
+    <animateTransform attributeName="transform" type="translate" values="0 0; -1000 0" dur="10s" repeatCount="indefinite"/>
+  </path>
+</svg>

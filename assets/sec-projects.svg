@@ -1,0 +1,24 @@
+<svg width="1000" height="40" viewBox="0 0 1000 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chev" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a371f7">
+        <animate attributeName="stop-color" values="#a371f7;#2dd4bf;#58a6ff;#a371f7" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#58a6ff">
+        <animate attributeName="stop-color" values="#58a6ff;#a371f7;#2dd4bf;#58a6ff" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="comet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a371f7" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#a371f7" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <path d="M10 11 L26 20 L10 29 Z" fill="url(#chev)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <text x="38" y="26" font-family="'SF Mono','Cascadia Code',Consolas,'Courier New',monospace" font-size="15" fill="#7d8590">hamza@github:~$ <tspan fill="#e6edf3" font-weight="600">ps aux | grep projects</tspan></text>
+  <line x1="380" y1="20" x2="992" y2="20" stroke="#21262d" stroke-width="1"/>
+  <rect x="310" y="19.25" width="70" height="1.5" fill="url(#comet)">
+    <animateTransform attributeName="transform" type="translate" values="70 0; 682 0" dur="5s" begin="-1.7s" repeatCount="indefinite"/>
+  </rect>
+</svg>
