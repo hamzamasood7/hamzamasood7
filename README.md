@@ -40,9 +40,14 @@ Faster than DuckDB 2.0 on **20 of 20** SQL benchmark queries over 10M rows. At a
 
 Source and the npm package (`vectrojs`) are launching soon. Follow along at **[vectrojs.dev](https://vectrojs.dev)**.
 
-## Other things I've built
+## Work
 
-Day job: SaaS products, POS systems, fintech apps and Web3. On the side:
+Products I build, where real money moves:
+
+- **[ClubTeq](https://clubteq.com)**: golf course management software. Tee sheet booking, pro shop POS, members, tournaments and QuickBooks sync in one system
+- **[Invoteq](https://invoteq.com)**: payment processing and POS for US merchants (restaurants, retail, healthcare)
+
+## On the side
 
 - **[Auction house](https://github.com/HamzaMasood7/Auction_Backend_Nestjs)**: a full bidding platform, NestJS API + [React front end](https://github.com/HamzaMasood7/Auction_Frontend_React)
 - **[ERC-20 token](https://github.com/HamzaMasood7/ERC20-Token)**: written by hand, to understand every line of it
