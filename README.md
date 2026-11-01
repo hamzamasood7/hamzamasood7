@@ -21,7 +21,7 @@ Multi-core SQL and dataframes for JavaScript. It runs on every core in Node, the
 
 ## Other work
 
-Before Vectro I built SaaS products, POS systems, fintech apps and Web3 projects, the kind where real money moves and nothing gets to break. Some side projects: [auction house](https://github.com/HamzaMasood7/Auction_Backend_Nestjs) (NestJS + React), an [ERC-20 token](https://github.com/HamzaMasood7/ERC20-Token), [particle species](https://github.com/HamzaMasood7/untended) that invent their own order, an [STM32 drawing machine](https://github.com/HamzaMasood7/2D-Art-Carafting-Using-STM32-LINEAR-LINES-ONLY).
+I also build SaaS products, POS systems, fintech apps and Web3 projects: the kind where real money moves and nothing gets to break. Some side projects: [auction house](https://github.com/HamzaMasood7/Auction_Backend_Nestjs) (NestJS + React), an [ERC-20 token](https://github.com/HamzaMasood7/ERC20-Token), [particle species](https://github.com/HamzaMasood7/untended) that invent their own order, an [STM32 drawing machine](https://github.com/HamzaMasood7/2D-Art-Carafting-Using-STM32-LINEAR-LINES-ONLY).
 
 ## Contact
 
