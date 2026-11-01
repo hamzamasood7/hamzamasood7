@@ -1,8 +1,16 @@
 # Hi, I'm Hamza
 
-Full-stack engineer. Right now I'm building Vectro.
+<samp>
+  <a href="https://vectrojs.dev">vectrojs.dev</a> ·
+  <a href="https://www.linkedin.com/in/hamza-masood7/">linkedin</a> ·
+  <a href="mailto:info@vectrojs.dev">info@vectrojs.dev</a>
+</samp>
 
-## Vectro
+<br><br>
+
+Full-stack engineer from fintech and POS, where real money moves and nothing gets to break. Now I'm building **Vectro**.
+
+<br>
 
 <a href="https://vectrojs.dev">
   <picture>
@@ -13,16 +21,35 @@ Full-stack engineer. Right now I'm building Vectro.
 
 Multi-core SQL and dataframes for JavaScript. It runs on every core in Node, the browser and the edge. Pure JS + WebAssembly, no dependencies.
 
-- Faster than DuckDB 2.0 on 20 of 20 SQL benchmark queries over 10M rows
-- A billion rows queried from disk in 0.37 GB of memory (DuckDB: 6.6 GB)
-- Top 10 rows of a billion in 11 ms (DuckDB: 827 ms)
+```js
+import { Engine, sql } from 'vectrojs';
 
-**[vectrojs.dev](https://vectrojs.dev)** · source and npm package (`vectrojs`) launching soon.
+const engine = new Engine();                  // uses every core
+const orders = engine.readCSV('orders.csv');  // parsed in parallel
 
-## Other work
+sql(`SELECT region, SUM(price * qty) AS revenue
+     FROM orders GROUP BY region ORDER BY revenue DESC`, { orders }).toRows();
+```
 
-I also build SaaS products, POS systems, fintech apps and Web3 projects: the kind where real money moves and nothing gets to break. Some side projects: [auction house](https://github.com/HamzaMasood7/Auction_Backend_Nestjs) (NestJS + React), an [ERC-20 token](https://github.com/HamzaMasood7/ERC20-Token), [particle species](https://github.com/HamzaMasood7/untended) that invent their own order, an [STM32 drawing machine](https://github.com/HamzaMasood7/2D-Art-Carafting-Using-STM32-LINEAR-LINES-ONLY).
+Faster than DuckDB 2.0 on **20 of 20** SQL benchmark queries over 10M rows. At a billion rows:
 
-## Contact
+| 1B rows, read from disk | Vectro | DuckDB 2.0 |
+|:--|--:|--:|
+| Memory used | **0.37 GB** | 6.6 GB |
+| Top 10 rows | **11 ms** | 827 ms |
 
-[LinkedIn](https://www.linkedin.com/in/hamza-masood7/) · [info@vectrojs.dev](mailto:info@vectrojs.dev)
+Source and the npm package (`vectrojs`) are launching soon. Follow along at **[vectrojs.dev](https://vectrojs.dev)**.
+
+## Other things I've built
+
+Day job: SaaS products, POS systems, fintech apps and Web3. On the side:
+
+- **[Auction house](https://github.com/HamzaMasood7/Auction_Backend_Nestjs)**: a full bidding platform, NestJS API + [React front end](https://github.com/HamzaMasood7/Auction_Frontend_React)
+- **[ERC-20 token](https://github.com/HamzaMasood7/ERC20-Token)**: written by hand, to understand every line of it
+- **[Untended](https://github.com/HamzaMasood7/untended)**: glowing particle species left alone to invent their own order
+- **[Birth lottery](https://github.com/HamzaMasood7/birth-lottery)**: be born as a random human, at the world's real odds
+- **[STM32 plotter](https://github.com/HamzaMasood7/2D-Art-Carafting-Using-STM32-LINEAR-LINES-ONLY)**: an art machine on a black pill board, straight lines only
+
+<br>
+
+<sub><em>"Keep moving forward."</em> (Meet the Robinsons)</sub>
