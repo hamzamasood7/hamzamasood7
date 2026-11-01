@@ -47,14 +47,6 @@ Products I build, where real money moves:
 - **[ClubTeq](https://clubteq.com)**: golf course management software. Tee sheet booking, pro shop POS, members, tournaments and QuickBooks sync in one system
 - **[Invoteq](https://invoteq.com)**: payment processing and POS for US merchants (restaurants, retail, healthcare)
 
-## On the side
-
-- **[Auction house](https://github.com/HamzaMasood7/Auction_Backend_Nestjs)**: a full bidding platform, NestJS API + [React front end](https://github.com/HamzaMasood7/Auction_Frontend_React)
-- **[ERC-20 token](https://github.com/HamzaMasood7/ERC20-Token)**: written by hand, to understand every line of it
-- **[Untended](https://github.com/HamzaMasood7/untended)**: glowing particle species left alone to invent their own order
-- **[Birth lottery](https://github.com/HamzaMasood7/birth-lottery)**: be born as a random human, at the world's real odds
-- **[STM32 plotter](https://github.com/HamzaMasood7/2D-Art-Carafting-Using-STM32-LINEAR-LINES-ONLY)**: an art machine on a black pill board, straight lines only
-
 <br>
 
 <sub><em>"Keep moving forward."</em> (Meet the Robinsons)</sub>
